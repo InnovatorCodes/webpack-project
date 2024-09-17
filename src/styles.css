@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+body{
+    background-image: url('./wallpaperflare.com_wallpaper.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    margin: 0;
+}   
+header h1{
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    margin: 0;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+    background:rgba(0, 0, 0, 0.6);
+    align-items: center;
+}
+
+nav button{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 20px;
+    font-style: normal;
+    background: none;
+    border: none;
+    color: white;
+    height: min-content;
+    transition: margin 0.2s ease-in-out;
+}
+
+nav button:hover:not(.selected){
+    margin-bottom: 17px;
+}
+
+nav button.selected{
+    border-bottom: 2px solid white;
+}
+
+.headline{
+    font-family: sans-serif;
+}
+
+.description p{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 20px;
+    font-style: normal;
+    max-width: 65ch;
+}
+
+
