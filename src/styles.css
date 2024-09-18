@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
 body{
-    background-image: url('./wallpaperflare.com_wallpaper3.jpg');
+    background-image: url('./images/wallpaperflare.com_wallpaper3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: scroll;
     color: white;
-    padding: 40px 60px;
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -16,6 +23,7 @@ body{
 header h1{
     font-family: "Allura", cursive;
     font-weight: 400;
+    padding-left: 40px;
     font-style: normal;
     font-size: 80px;
     margin: 0;
@@ -31,6 +39,7 @@ nav{
     display: flex;
     gap: 20px;
     align-items: center;
+    padding-right: 60px;
 }
 
 nav button{
@@ -44,7 +53,7 @@ nav button{
     color: white;
     height: min-content;
     cursor: pointer;
-    transition: padding 0.15s ease-in-out;
+    transition: padding 0.2s ease-in-out;
 }
 
 nav button:hover:not(.selected){
@@ -57,6 +66,7 @@ nav button.selected{
 
 .home{
     margin-top: 13%;
+    padding-left: 40px;
 }
 
 .headline{
@@ -76,6 +86,38 @@ nav button.selected{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
+.items{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(5,1fr);
+    padding: 0 30px;
+}
 
+.item{
+    background: rgba(230, 230, 230, 0.8);
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    color: black;
+}
+
+.item h3{
+    word-wrap: break-word;
+}
+
+.item p{
+    padding: 0 5%;
+}
+
+.item img{
+    width: 100%;
+    height: 250px;
+    align-self: center;
+}
