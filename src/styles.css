@@ -3,15 +3,15 @@
 
 
 body{
-    background-image: url('./wallpaperflare.com_wallpaper.jpg');
-    background-size: 100% auto;
+    background-image: url('./wallpaperflare.com_wallpaper3.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     padding: 40px 60px;
     display: flex;
     flex-direction: column;
-    gap: 200px;
     margin: 0;
+    height: 90vh;
 }   
 header h1{
     font-family: "Allura", cursive;
@@ -30,7 +30,6 @@ header {
 nav{
     display: flex;
     gap: 20px;
-    background:rgba(0, 0, 0, 0.6);
     align-items: center;
 }
 
@@ -44,15 +43,20 @@ nav button{
     border: none;
     color: white;
     height: min-content;
-    transition: margin 0.2s ease-in-out;
+    cursor: pointer;
+    transition: padding 0.15s ease-in-out;
 }
 
 nav button:hover:not(.selected){
-    margin-bottom: 17px;
+    padding-bottom: 17px;
 }
 
 nav button.selected{
     border-bottom: 2px solid white;
+}
+
+.home{
+    margin-top: 13%;
 }
 
 .headline{
@@ -66,6 +70,12 @@ nav button.selected{
     font-size: 20px;
     font-style: normal;
     max-width: 65ch;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
