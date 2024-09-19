@@ -31,6 +31,7 @@ body{
     min-height: max-content;
     min-width: max-content;
     height: 100%;
+    max-width: 95vw;
 }   
 header h1{
     font-family: "Allura", cursive;
@@ -129,6 +130,45 @@ nav button.selected{
     transform: translateX(-100%); /* Start off-screen to the left */
     animation: slideIn 0.6s forwards;
 }
+
+/* Slide out keyframe */
+@keyframes slideOutDiv {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/* Slide in keyframe */
+@keyframes slideInDiv {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Initial hidden state for the new main div */
+.main.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.main {
+    transition: all 0.3s ease;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
 
 @keyframes slideIn {
     0% {
@@ -229,4 +269,17 @@ nav button.selected{
     letter-spacing: 2px;
     font-style: normal;
     font-size: 3rem;
+}
+
+.links{
+    display: flex;
+    gap: 20px;
+}
+.links img{
+    width: 50px;
+    transition: all 0.3s ease;
+}
+
+.links img:hover{
+    transform: scale(1.2);
 }

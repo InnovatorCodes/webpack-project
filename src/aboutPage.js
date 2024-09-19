@@ -31,5 +31,6 @@ export default function(){
     maindiv.appendChild(div2);
     maindiv.appendChild(div3);
     maindiv.classList.add('about');
+    maindiv.classList.add('main','hidden');
     return maindiv;
 }

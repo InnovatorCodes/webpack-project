@@ -9,48 +9,71 @@ let maindiv;
 
 const content=document.querySelector('#content');
 
-window.addEventListener('load',()=>{
-    maindiv=createHomePage();
-    content.appendChild(maindiv);
-})
+maindiv=createHomePage();
+maindiv.classList.remove('hidden');
+content.appendChild(maindiv);
 
 document.addEventListener('click',(event)=>{
     let target=event.target;
     if(target.id=='homebtn' && currentPage!='home'){
+        document.body.classList.add('no-scroll');
         currentPage='home';
         document.querySelector('.selected').classList.remove('selected');
         document.querySelector('#homebtn').classList.add('selected');
-        content.removeChild(maindiv);
-        maindiv=createHomePage();
-        content.appendChild(maindiv);
-        
+        maindiv.style.animation='slideOutDiv 0.5s forwards';
+        setTimeout(() => {
+            content.removeChild(maindiv);
+            maindiv=createHomePage();
+            content.appendChild(maindiv);
+            maindiv.classList.remove('hidden');
+            maindiv.style.animation="slideInDiv 0.5s forwards";
+            document.body.classList.add('no-scroll');
+        }, 500);
     };
 
     if(target.id=='menubtn' && currentPage!='menu'){
-        content.removeChild(maindiv);
         currentPage='menu';
         document.querySelector('.selected').classList.remove('selected');
         document.querySelector('#menubtn').classList.add('selected');
-        maindiv=createMenuPage();
-        content.appendChild(maindiv);
+        maindiv.style.animation='slideOutDiv 0.5s forwards';
+        setTimeout(() => {
+            content.removeChild(maindiv);
+            maindiv=createMenuPage();
+            content.appendChild(maindiv);
+            maindiv.classList.remove('hidden');
+            maindiv.style.animation="slideInDiv 0.5s forwards";
+            document.body.classList.add('no-scroll');
+        }, 500);
     }
 
     if(target.id=='aboutbtn' && currentPage!='about'){
-        content.removeChild(maindiv);
         currentPage='about';
         document.querySelector('.selected').classList.remove('selected');
         document.querySelector('#aboutbtn').classList.add('selected');
-        maindiv=createAboutPage();
-        content.appendChild(maindiv);
+        maindiv.style.animation='slideOutDiv 0.5s forwards';
+        setTimeout(() => {
+            content.removeChild(maindiv);
+            maindiv=createAboutPage();
+            content.appendChild(maindiv);
+            maindiv.classList.remove('hidden');
+            maindiv.style.animation="slideInDiv 0.5s forwards";
+            document.body.classList.add('no-scroll');
+        }, 500);
     }
 
     if(target.id=='contactbtn' && currentPage!='contact'){
-        content.removeChild(maindiv);
         currentPage='contact';
         document.querySelector('.selected').classList.remove('selected');
         document.querySelector('#contactbtn').classList.add('selected');
-        maindiv=createContactPage();
-        content.appendChild(maindiv);
+        maindiv.style.animation='slideOutDiv 0.5s forwards';
+        setTimeout(() => {
+            content.removeChild(maindiv);
+            maindiv=createContactPage();
+            content.appendChild(maindiv);
+            maindiv.classList.remove('hidden');
+            maindiv.style.animation="slideInDiv 0.5s forwards";
+            document.body.classList.add('no-scroll');
+        }, 500);
     }
 })
 

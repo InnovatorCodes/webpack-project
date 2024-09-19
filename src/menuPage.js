@@ -46,9 +46,10 @@ export default function(){
         itemdiv.appendChild(itemname);
         itemdiv.appendChild(image);
         itemdiv.appendChild(itemdesc);
-        itemdiv.style.animationDelay = `${0.2 + 0.1 * index}s`;
+        itemdiv.style.animationDelay = `${0.6 + 0.1 * index}s`;
         items.appendChild(itemdiv);
     })
     maindiv.appendChild(items);
+    maindiv.classList.add('main','hidden');
     return maindiv
 }

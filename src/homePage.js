@@ -13,5 +13,6 @@ export default function(){
     description.classList.add('description');
     maindiv.appendChild(headline);
     maindiv.appendChild(description);
+    maindiv.classList.add('main','hidden');
     return maindiv
 }

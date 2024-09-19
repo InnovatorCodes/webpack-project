@@ -1,3 +1,7 @@
+import fb from "./images/fb.png";
+import twitter from "./images/twitter.png";
+import insta from "./images/insta.svg";
+
 export default function(){
     const maindiv=document.createElement('div');
     maindiv.classList.add('contact');
@@ -52,14 +56,25 @@ export default function(){
     const desc=document.createElement('p');
     desc.textContent="Stay connected through our social media for updates, special offers, and more!";
     const links=document.createElement('div');
-    const link1=document.createElement('p');
-    link1.textContent="Facebook: facebook.com/theurbankitchenBLR";
-    const link2=document.createElement('p');
-    link2.textContent="Instagram: instagram.com/theurbankitchen";
-    const link3=document.createElement('p');
-    link3.textContent="Twitter: twitter.com/urbankitchenBLR";
+    links.classList.add('links');
+    const link1=document.createElement('a');
+    const fbicon=document.createElement('img');
+    fbicon.src=fb;
+    link1.appendChild(fbicon);
+    link1.href="https://facebook.com/theurbankitchen";
+    const link2=document.createElement('a');
+    const twittericon=document.createElement('img');
+    twittericon.src=twitter;
+    link2.appendChild(twittericon);
+    link2.href="https://twitter.com/theurbankitchen";
+    const link3=document.createElement('a');
+    const instaicon=document.createElement('img');
+    instaicon.src=insta;
+    link3.appendChild(instaicon);
+    link3.href="https://instagram.com/theurbankitchen";
     links.append(link1,link2,link3);
     div6.append(follow,desc,links);
     maindiv.append(heading,div1,div2,div3,div4,div5,div6);
+    maindiv.classList.add('main','hidden');
     return maindiv;
 }
