@@ -207,7 +207,7 @@ body.no-scroll {
     display: flex;
     flex-direction: column;
     margin: 0 40px;
-    gap: 50px;
+    gap: 25px;
     background-color: rgba(240, 240, 240, 0.7);
     color: #333333;
     margin-top: 40px;
@@ -221,7 +221,7 @@ body.no-scroll {
 .about div{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .about p{

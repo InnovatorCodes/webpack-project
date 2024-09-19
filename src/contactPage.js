@@ -66,12 +66,12 @@ export default function(){
     const twittericon=document.createElement('img');
     twittericon.src=twitter;
     link2.appendChild(twittericon);
-    link2.href="https://twitter.com/theurbankitchen";
+    link2.href="https://twitter.com/theurbankitchenblr";
     const link3=document.createElement('a');
     const instaicon=document.createElement('img');
     instaicon.src=insta;
     link3.appendChild(instaicon);
-    link3.href="https://instagram.com/theurbankitchen";
+    link3.href="https://instagram.com/theurbankitchenblr";
     links.append(link1,link2,link3);
     div6.append(follow,desc,links);
     maindiv.append(heading,div1,div2,div3,div4,div5,div6);
