@@ -27,12 +27,15 @@ document.addEventListener('click',(event)=>{
             content.appendChild(maindiv);
             maindiv.classList.remove('hidden');
             maindiv.style.animation="slideInDiv 0.5s forwards";
-            document.body.classList.add('no-scroll');
+            setTimeout(()=>{
+                document.body.classList.remove('no-scroll');
+            },500);
         }, 500);
     };
 
     if(target.id=='menubtn' && currentPage!='menu'){
         currentPage='menu';
+        document.body.classList.add('no-scroll');
         document.querySelector('.selected').classList.remove('selected');
         document.querySelector('#menubtn').classList.add('selected');
         maindiv.style.animation='slideOutDiv 0.5s forwards';
@@ -42,12 +45,15 @@ document.addEventListener('click',(event)=>{
             content.appendChild(maindiv);
             maindiv.classList.remove('hidden');
             maindiv.style.animation="slideInDiv 0.5s forwards";
-            document.body.classList.add('no-scroll');
+            setTimeout(()=>{
+                document.body.classList.remove('no-scroll');
+            },600);     
         }, 500);
     }
 
     if(target.id=='aboutbtn' && currentPage!='about'){
         currentPage='about';
+        document.body.classList.add('no-scroll');
         document.querySelector('.selected').classList.remove('selected');
         document.querySelector('#aboutbtn').classList.add('selected');
         maindiv.style.animation='slideOutDiv 0.5s forwards';
@@ -57,12 +63,15 @@ document.addEventListener('click',(event)=>{
             content.appendChild(maindiv);
             maindiv.classList.remove('hidden');
             maindiv.style.animation="slideInDiv 0.5s forwards";
-            document.body.classList.add('no-scroll');
+            setTimeout(()=>{
+                document.body.classList.remove('no-scroll');
+            },500);
         }, 500);
     }
 
     if(target.id=='contactbtn' && currentPage!='contact'){
         currentPage='contact';
+        document.body.classList.add('no-scroll');
         document.querySelector('.selected').classList.remove('selected');
         document.querySelector('#contactbtn').classList.add('selected');
         maindiv.style.animation='slideOutDiv 0.5s forwards';
@@ -72,7 +81,7 @@ document.addEventListener('click',(event)=>{
             content.appendChild(maindiv);
             maindiv.classList.remove('hidden');
             maindiv.style.animation="slideInDiv 0.5s forwards";
-            document.body.classList.add('no-scroll');
+            document.body.classList.remove('no-scroll');
         }, 500);
     }
 })
