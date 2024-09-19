@@ -10,8 +10,12 @@ let maindiv;
 const content=document.querySelector('#content');
 
 maindiv=createHomePage();
-maindiv.classList.remove('hidden');
-content.appendChild(maindiv);
+window.addEventListener('load',()=>{
+    content.appendChild(maindiv);
+    maindiv.classList.remove('hidden');
+    document.querySelector('#preloader').classList.add('hidden');
+    document.querySelector('#content').style.display = 'block';
+})
 
 document.addEventListener('click',(event)=>{
     let target=event.target;
