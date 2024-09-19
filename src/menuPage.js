@@ -2,6 +2,12 @@ import burger from "./images/burger.jpg";
 import nuggets from "./images/nuggets.jpg";
 import fries from "./images/fries.jpg";
 import hotdog from "./images/hotdog.jpg";
+import sandwich from "./images/sandwich.jpeg";
+import vegburger from "./images/veg-burger.jpg";
+import doner from "./images/doner.jpg";
+import milkshake from "./images/milkshake.jpg";
+import onionrings from "./images/onion-rings.jpg";
+import mozarella from "./images/mozarella.jpg";
 
 let menuitems=["Fried Chicken Burger","Chicken Nuggets","French Fries","Hot Dog","Grilled Chicken Sandwich","Veggie Burger","Chicken Doner Pitta","Milkshake",
     "Onion Rings","Mozzarella Sticks"];
@@ -18,7 +24,7 @@ let menudesc=[
     "Golden-fried mozzarella cheese sticks, crunchy on the outside, gooey on the inside, served with marinara sauce for dipping."
 ];
 
-let menuimgs=[burger,nuggets,fries,hotdog];
+let menuimgs=[burger,nuggets,fries,hotdog,sandwich,vegburger,doner,milkshake,onionrings,mozarella];
 
 export default function(){
     const maindiv=document.createElement('div');

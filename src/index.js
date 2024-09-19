@@ -1,6 +1,8 @@
 import "./styles.css";
 import createHomePage from "./homePage.js";
 import createMenuPage from "./menuPage.js";
+import createAboutPage from "./aboutPage.js";
+import createContactPage from "./contactPage.js";
 
 let currentPage='home';
 let maindiv;
@@ -30,6 +32,24 @@ document.addEventListener('click',(event)=>{
         document.querySelector('.selected').classList.remove('selected');
         document.querySelector('#menubtn').classList.add('selected');
         maindiv=createMenuPage();
+        content.appendChild(maindiv);
+    }
+
+    if(target.id=='aboutbtn' && currentPage!='about'){
+        content.removeChild(maindiv);
+        currentPage='about';
+        document.querySelector('.selected').classList.remove('selected');
+        document.querySelector('#aboutbtn').classList.add('selected');
+        maindiv=createAboutPage();
+        content.appendChild(maindiv);
+    }
+
+    if(target.id=='contactbtn' && currentPage!='contact'){
+        content.removeChild(maindiv);
+        currentPage='contact';
+        document.querySelector('.selected').classList.remove('selected');
+        document.querySelector('#contactbtn').classList.add('selected');
+        maindiv=createContactPage();
         content.appendChild(maindiv);
     }
 })
