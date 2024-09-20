@@ -11,10 +11,11 @@ const content=document.querySelector('#content');
 
 maindiv=createHomePage();
 window.addEventListener('load',()=>{
-    content.appendChild(maindiv);
-    maindiv.classList.remove('hidden');
-    document.querySelector('#preloader').classList.add('hidden');
-    document.querySelector('#content').style.display = 'block';
+    setTimeout(()=>{
+        content.appendChild(maindiv);
+        document.body.style.display="block";
+        maindiv.classList.remove('hidden');
+    },500);
 })
 
 document.addEventListener('click',(event)=>{
